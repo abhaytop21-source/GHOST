@@ -2,7 +2,7 @@
 ==========================================
             GHOST Brain
 ==========================================
-Detects the user's intent.
+Detects user intent.
 """
 
 from core.commands import COMMANDS
@@ -19,7 +19,6 @@ class Brain:
             for keyword in keywords:
 
                 if keyword in text:
-
                     return intent
 
         return "UNKNOWN"
