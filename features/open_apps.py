@@ -20,24 +20,23 @@ class AppOpener:
             "cmd": "cmd"
         }
 
-    def open(self, text):
+    def open(self, app_name):
 
-        text = text.lower()
+        app_name = app_name.lower().strip()
 
-        for app_name, command in self.apps.items():
+        if app_name in self.apps:
 
-            if app_name in text:
+            try:
 
-                try:
-                    subprocess.Popen(command)
+                subprocess.Popen(self.apps[app_name])
 
-                    return True, f"Opening {app_name}"
+                return True, f"Opening {app_name}"
 
-                except Exception as e:
+            except Exception as e:
 
-                    return False, str(e)
+                return False, str(e)
 
-        return False, "Application not found."
+        return False, f"I couldn't find {app_name}."
 
 
 app_opener = AppOpener()

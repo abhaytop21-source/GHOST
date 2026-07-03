@@ -11,17 +11,18 @@ from core.speaker import speaker
 
 class Router:
 
-    def execute(self, intent, text):
+    def execute(self, command):
+
+        intent = command["intent"]
+        entity = command["entity"]
 
         if intent == "OPEN_APP":
 
-            success, message = app_opener.open(text)
-
+            success, message = app_opener.open(entity)
             speaker.speak(message)
-
             return
 
-        speaker.speak("Sorry, I don't know how to do that yet.")
+        speaker.speak("Sorry, I don't know that command yet.")
 
 
 router = Router()

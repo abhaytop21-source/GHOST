@@ -25,11 +25,11 @@ def main():
 
         print(f"\nYou: {text}")
 
-        intent = brain.detect_intent(text)
+        command = brain.detect(text)
 
-        print(f"Intent: {intent}")
+        print(command)
 
-        router.execute(intent, text)
+        router.execute(command)
 
 
 if __name__ == "__main__":
