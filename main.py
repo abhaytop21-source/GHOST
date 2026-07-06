@@ -1,36 +1,47 @@
 """
 ==========================================
-            GHOST AI Assistant
+        GHOST AI Platform
 ==========================================
+Main Entry Point
 """
 
 from core.listener import listener
 from core.speaker import speaker
 from core.brain import brain
 from core.router import router
+from core.logger import logger
 
 
-def main():
+class Ghost:
 
-    speaker.speak("Hello Abhay. Ghost is online.")
+    def __init__(self):
 
-    while True:
+        logger.info("Starting GHOST...")
 
-        audio = listener.record()
+        speaker.speak("Hello Abhay. Ghost is online.")
 
-        text = listener.transcribe(audio)
+    def run(self):
 
-        if not text:
-            continue
+        while True:
 
-        print(f"\nYou: {text}")
+            audio = listener.record()
 
-        command = brain.detect(text)
+            text = listener.transcribe(audio)
 
-        print(command)
+            if not text:
+                continue
 
-        router.execute(command)
+            logger.info(f"User: {text}")
+
+            request = brain.detect(text)
+
+            logger.info(f"Intent: {request.intent}")
+
+            router.execute(request)
 
 
 if __name__ == "__main__":
-    main()
+
+    ghost = Ghost()
+
+    ghost.run()

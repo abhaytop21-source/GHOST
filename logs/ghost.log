@@ -1,0 +1,40 @@
+06-07-2026 20:03:25 | INFO | GHOST Started
+06-07-2026 20:03:25 | WARNING | Microphone not detected
+06-07-2026 20:03:25 | ERROR | Application not found
+06-07-2026 20:31:45 | INFO | Routing Intent -> OPEN_APP
+06-07-2026 20:31:45 | INFO | Opening notepad
+06-07-2026 20:35:59 | INFO | Starting GHOST...
+06-07-2026 20:36:09 | INFO | Processing audio with duration 00:05.000
+06-07-2026 20:36:11 | INFO | Detected language 'id' with probability 0.22
+06-07-2026 20:36:13 | INFO | User: open chrome
+06-07-2026 20:36:13 | INFO | Intent: OPEN_APP
+06-07-2026 20:36:13 | INFO | Routing Intent -> OPEN_APP
+06-07-2026 20:36:13 | WARNING | I couldn't find chrome.
+06-07-2026 20:36:19 | INFO | Processing audio with duration 00:05.000
+06-07-2026 20:36:21 | INFO | Detected language 'en' with probability 0.26
+06-07-2026 20:36:24 | INFO | User: Open node pedal
+06-07-2026 20:36:24 | INFO | Intent: OPEN_APP
+06-07-2026 20:36:24 | INFO | Routing Intent -> OPEN_APP
+06-07-2026 20:36:24 | WARNING | I couldn't find node pedal.
+06-07-2026 20:36:31 | INFO | Processing audio with duration 00:05.000
+06-07-2026 20:36:33 | INFO | Detected language 'ta' with probability 0.39
+06-07-2026 20:36:34 | INFO | User: \u0baa\u0bc1\u0baa\u0bcd\u0baa\u0bc6\u0ba9\u0bcd\u0ba9\u0bcb\u0b9f\u0bcd\u0b9f\u0bc1 \u0baa\u0bc7\u0bb2\u0bcd
+06-07-2026 20:36:34 | INFO | Intent: UNKNOWN
+06-07-2026 20:36:34 | INFO | Routing Intent -> UNKNOWN
+06-07-2026 20:36:41 | INFO | Processing audio with duration 00:05.000
+06-07-2026 20:36:43 | INFO | Detected language 'hi' with probability 0.40
+06-07-2026 20:36:47 | INFO | User: open node pad
+06-07-2026 20:36:47 | INFO | Intent: OPEN_APP
+06-07-2026 20:36:47 | INFO | Routing Intent -> OPEN_APP
+06-07-2026 20:36:47 | WARNING | I couldn't find node pad.
+06-07-2026 20:36:53 | INFO | Processing audio with duration 00:05.000
+06-07-2026 20:36:55 | INFO | Detected language 'hi' with probability 0.28
+06-07-2026 20:37:31 | INFO | Starting GHOST...
+06-07-2026 20:37:41 | INFO | Processing audio with duration 00:05.000
+06-07-2026 20:37:42 | INFO | Detected language 'hi' with probability 0.31
+06-07-2026 20:37:44 | INFO | User: open not pad
+06-07-2026 20:37:44 | INFO | Intent: OPEN_APP
+06-07-2026 20:37:44 | INFO | Routing Intent -> OPEN_APP
+06-07-2026 20:37:44 | WARNING | I couldn't find not pad.
+06-07-2026 20:37:50 | INFO | Processing audio with duration 00:05.000
+06-07-2026 20:37:52 | INFO | Detected language 'en' with probability 0.50

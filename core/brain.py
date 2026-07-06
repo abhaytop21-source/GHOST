@@ -2,23 +2,22 @@
 ==========================================
             GHOST Brain
 ==========================================
-Detects intent and extracts entities.
+Analyzes user input and creates a Request.
 """
 
 from core.commands import COMMANDS
+from core.request import Request
 
 
 class Brain:
 
-    def detect(self, text):
+    def detect(self, text: str) -> Request:
 
-        text = text.lower()
+        text = text.lower().strip()
 
-        result = {
-            "intent": "UNKNOWN",
-            "entity": None,
-            "text": text
-        }
+        request = Request(
+            text=text
+        )
 
         for intent, keywords in COMMANDS.items():
 
@@ -26,15 +25,15 @@ class Brain:
 
                 if keyword in text:
 
-                    result["intent"] = intent
+                    request.intent = intent
 
                     entity = text.replace(keyword, "").strip()
 
-                    result["entity"] = entity
+                    request.entity = entity if entity else None
 
-                    return result
+                    return request
 
-        return result
+        return request
 
 
 brain = Brain()

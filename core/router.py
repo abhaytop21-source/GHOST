@@ -2,24 +2,34 @@
 ==========================================
             GHOST Router
 ==========================================
-Routes user requests to the correct feature.
+Routes a Request to the correct plugin.
 """
 
-from features.open_apps import app_opener
 from core.speaker import speaker
+from core.logger import logger
+
+from core.request import Request
+
+from features.open_apps import app_opener
 
 
 class Router:
 
-    def execute(self, command):
+    def execute(self, request: Request):
 
-        intent = command["intent"]
-        entity = command["entity"]
+        logger.info(f"Routing Intent -> {request.intent}")
 
-        if intent == "OPEN_APP":
+        if request.intent == "OPEN_APP":
 
-            success, message = app_opener.open(entity)
+            success, message = app_opener.open(request.entity)
+
+            if success:
+                logger.info(message)
+            else:
+                logger.warning(message)
+
             speaker.speak(message)
+
             return
 
         speaker.speak("Sorry, I don't know that command yet.")
